@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --primary-color: #0066cc;
     --secondary-color: #1a1a1a;
@@ -52,7 +53,7 @@ body {
 }
 
 .logo-img {
-    height: 140px;
+    height: 50px;
     width: auto;
     display: block;
 }
@@ -85,7 +86,6 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     padding: 120px 20px;
     text-align: center;
@@ -93,19 +93,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     animation: fadeInDown 0.8s ease;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
     animation: fadeInUp 0.8s ease;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
